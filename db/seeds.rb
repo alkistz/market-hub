@@ -5,3 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Market.destroy_all
+
+markets = Market.create([
+  {
+    name: 'African store',
+    address: 'Place Fernand Cocq 9, Brussels',
+    category: 'African'
+  },
+
+  {
+    name: 'Bordel store',
+    address: 'Boulevard du regent 47, Brussels',
+    category: 'Bulgarian'
+  }
+])
