@@ -6,7 +6,8 @@ class MarketsController < ApplicationController
     @markers = @markets.map do |market|
       {
         lng: market.longitude,
-        lat: market.latitude
+        lat: market.latitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { market: market })
       }
     end
   end
