@@ -12,4 +12,18 @@ class MarketsController < ApplicationController
     end
   end
 
+  def show
+    
+  end
+
+
+  private
+
+  def market_find
+    @market = Market.find(params[:id])
+  end
+
+  def market_params
+    params.perimt(:market).require(:name, :address, :category)
+  end
 end
